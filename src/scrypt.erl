@@ -8,7 +8,6 @@
 -module(scrypt).
 -include("scrypt.hrl").
 
--export([start/0, stop/0]).
 -export([hash/1, hash/2]).
 -export([verify/2, verify/3]).
 -export([encrypt/2, encrypt/3]).
@@ -18,11 +17,6 @@
 %%% Exported Functions
 %%%===================================================================
 
-start() ->
-    application:start( scrypt ).
-
-stop() ->
-    application:stop( scrypt ).
 
 %% @spec hash( Pass::iolist(), Options::list() )
 %%           -> {ok, Hash::binary()} | {error,Reason::term()}.
