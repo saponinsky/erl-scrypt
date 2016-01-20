@@ -70,7 +70,7 @@ true = :scrypt.verify(hash, pass)
 
 { :ok, ciphertext } = :scrypt.encrypt("hello!", "a strong password")
 { :ok, plaintext } = :scrypt.decrypt(ciphertext, "a strong password")
-plaintext = "hello!"
+^plaintext = "hello!"
 
 ## with options
 opts = [maxmem: 1024, maxmemfrac: 0.2, maxtime: 1.0]
